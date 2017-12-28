@@ -32,7 +32,7 @@ public:
 	
 	/*
 	 * REG CONFIG:
-	 * Configuration Register 
+	 * Configuration Register
 	 */
 	struct CONFIG
 	{
@@ -48,9 +48,9 @@ public:
 		/* Bits MASK_RX_DR: */
 		/*
 		 * Mask interrupt caused by RX_DR
-		 *           1: Interrupt not reflected on the IRQ pin
-		 *           0: Reflect RX_DR as active low interrupt on the
-		 *           IRQ pin 
+		 * 1: Interrupt not reflected on the IRQ pin
+		 * 0: Reflect RX_DR as active low interrupt on the
+		 * IRQ pin
 		 */
 		struct MASK_RX_DR
 		{
@@ -60,9 +60,9 @@ public:
 		/* Bits MASK_TX_DS: */
 		/*
 		 * Mask interrupt caused by TX_DS
-		 *           1: Interrupt not reflected on the IRQ pin
-		 *           0: Reflect TX_DS as active low interrupt on the IRQ
-		 *           pin 
+		 * 1: Interrupt not reflected on the IRQ pin
+		 * 0: Reflect TX_DS as active low interrupt on the IRQ
+		 * pin
 		 */
 		struct MASK_TX_DS
 		{
@@ -72,9 +72,9 @@ public:
 		/* Bits MASK_MAX_RT: */
 		/*
 		 * Mask interrupt caused by MAX_RT
-		 *           1: Interrupt not reflected on the IRQ pin
-		 *           0: Reflect MAX_RT as active low interrupt on the
-		 *           IRQ pin 
+		 * 1: Interrupt not reflected on the IRQ pin
+		 * 0: Reflect MAX_RT as active low interrupt on the
+		 * IRQ pin
 		 */
 		struct MASK_MAX_RT
 		{
@@ -84,7 +84,7 @@ public:
 		/* Bits EN_CRC: */
 		/*
 		 * Enable CRC. Forced high if one of the bits in the
-		 *           EN_AA is high 
+		 * EN_AA is high
 		 */
 		struct EN_CRC
 		{
@@ -112,7 +112,7 @@ public:
 		/* Bits PRIM_RX: */
 		/*
 		 * RX/TX control
-		 *           1: PRX, 0: PTX 
+		 * 1: PRX, 0: PTX
 		 */
 		struct PRIM_RX
 		{
@@ -145,8 +145,8 @@ public:
 	/*
 	 * REG EN_AA:
 	 * Enable 'Auto Acknowledgment' Function Disable
-	 *       this functionality to be compatible with nRF2401,
-	 *       see page 75 
+	 * this functionality to be compatible with nRF2401,
+	 * see page 75
 	 */
 	struct EN_AA
 	{
@@ -224,7 +224,7 @@ public:
 	
 	/*
 	 * REG EN_RXADDR:
-	 * Enabled RX Addresses 
+	 * Enabled RX Addresses
 	 */
 	struct EN_RXADDR
 	{
@@ -303,7 +303,7 @@ public:
 	/*
 	 * REG SETUP_AW:
 	 * Setup of Address Widths
-	 *       (common for all data pipes) 
+	 * (common for all data pipes)
 	 */
 	struct SETUP_AW
 	{
@@ -319,11 +319,11 @@ public:
 		/* Bits AW: */
 		/*
 		 * RX/TX Address field width
-		 *           '00' - Illegal
-		 *           '01' - 3 bytes
-		 *           '10' - 4 bytes
-		 *           11' - 5 bytes
-		 *           LSByte is used if address width is below 5 bytes 
+		 * '00' - Illegal
+		 * '01' - 3 bytes
+		 * '10' - 4 bytes
+		 * 11' - 5 bytes
+		 * LSByte is used if address width is below 5 bytes
 		 */
 		struct AW
 		{
@@ -357,7 +357,7 @@ public:
 	
 	/*
 	 * REG SETUP_RETR:
-	 * Setup of Automatic Retransmission 
+	 * Setup of Automatic Retransmission
 	 */
 	struct SETUP_RETR
 	{
@@ -366,13 +366,13 @@ public:
 		/* Bits ARDa: */
 		/*
 		 * Auto Retransmit Delay
-		 *           4'b0000 Wait 250µs
-		 *           4'b0001 Wait 500µs
-		 *           4'b0010 Wait 750µs
-		 *           ........
-		 *           4b1111 Wait 4000µs
-		 *           (Delay defined from end of transmission to start of
-		 *           next transmission)b 
+		 * 4'b0000 Wait 250µs
+		 * 4'b0001 Wait 500µs
+		 * 4'b0010 Wait 750µs
+		 * ........
+		 * 4b1111 Wait 4000µs
+		 * (Delay defined from end of transmission to start of
+		 * next transmission)b
 		 */
 		struct ARDa
 		{
@@ -382,10 +382,10 @@ public:
 		/* Bits ARC: */
 		/*
 		 * Auto Retransmit Count
-		 *           4'b0000 Re-Transmit disabled
-		 *           4b0001 Up to 1 Re-Transmit on fail of AA
-		 *           ......
-		 *           4b1111 Up to 15 Re-Transmit on fail of AA 
+		 * 4'b0000 Re-Transmit disabled
+		 * 4b0001 Up to 1 Re-Transmit on fail of AA
+		 * ......
+		 * 4b1111 Up to 15 Re-Transmit on fail of AA
 		 */
 		struct ARC
 		{
@@ -415,7 +415,7 @@ public:
 	
 	/*
 	 * REG RF_CH:
-	 * RF Channel 
+	 * RF Channel
 	 */
 	struct RF_CH
 	{
@@ -458,7 +458,7 @@ public:
 	
 	/*
 	 * REG RF_SETUP:
-	 * RF Setup Register 
+	 * RF Setup Register
 	 */
 	struct RF_SETUP
 	{
@@ -481,7 +481,7 @@ public:
 		/* Bits RF_DR_LOW: */
 		/*
 		 * Set RF Data Rate to 250kbps. See RF_DR_HIGH
-		 *           for encoding. 
+		 * for encoding.
 		 */
 		struct RF_DR_LOW
 		{
@@ -498,13 +498,13 @@ public:
 		/* Bits RF_DR_HIGH: */
 		/*
 		 * Select between the high speed data rates. This bit
-		 *           is don't care if RF_DR_LOW is set.
-		 *           Encoding:
-		 *           [RF_DR_LOW, RF_DR_HIGH]:
-		 *           2'b00 - 1Mbps
-		 *           2'b01 - 2Mbps
-		 *           2'b10 - 250kbps
-		 *           2'b11 - Reserved 
+		 * is don't care if RF_DR_LOW is set.
+		 * Encoding:
+		 * [RF_DR_LOW, RF_DR_HIGH]:
+		 * 2'b00 - 1Mbps
+		 * 2'b01 - 2Mbps
+		 * 2'b10 - 250kbps
+		 * 2'b11 - Reserved
 		 */
 		struct RF_DR_HIGH
 		{
@@ -552,8 +552,8 @@ public:
 	/*
 	 * REG STATUS:
 	 * Status Register (In parallel to the SPI command
-	 *       word applied on the MOSI pin, the STATUS register
-	 *       is shifted serially out on the MISO pin) 
+	 * word applied on the MOSI pin, the STATUS register
+	 * is shifted serially out on the MISO pin)
 	 */
 	struct STATUS
 	{
@@ -570,8 +570,8 @@ public:
 		/* Bits RX_DR: */
 		/*
 		 * Data Ready RX FIFO interrupt. Asserted when
-		 *           new data arrives RX FIFOc.
-		 *           Write 1 to clear bit. 
+		 * new data arrives RX FIFOc.
+		 * Write 1 to clear bit.
 		 */
 		struct RX_DR
 		{
@@ -582,10 +582,10 @@ public:
 		/* Bits TX_DS: */
 		/*
 		 * Data Sent TX FIFO interrupt. Asserted when
-		 *           packet transmitted on TX. If AUTO_ACK is acti-
-		 *           vated, this bit is set high only when ACK is
-		 *           received.
-		 *           Write 1 to clear bit. 
+		 * packet transmitted on TX. If AUTO_ACK is acti-
+		 * vated, this bit is set high only when ACK is
+		 * received.
+		 * Write 1 to clear bit.
 		 */
 		struct TX_DS
 		{
@@ -597,8 +597,8 @@ public:
 		/* Bits MAX_RT: */
 		/*
 		 * Maximum number of TX retransmits interrupt
-		 *           Write 1 to clear bit. If MAX_RT is asserted it must
-		 *           be cleared to enable further communication. 
+		 * Write 1 to clear bit. If MAX_RT is asserted it must
+		 * be cleared to enable further communication.
 		 */
 		struct MAX_RT
 		{
@@ -610,10 +610,10 @@ public:
 		/* Bits RX_P_NO: */
 		/*
 		 * Data pipe number for the payload available for
-		 *           reading from RX_FIFO
-		 *           000-101: Data Pipe Number
-		 *           110: Not Used
-		 *           111: RX FIFO Empty 
+		 * reading from RX_FIFO
+		 * 000-101: Data Pipe Number
+		 * 110: Not Used
+		 * 111: RX FIFO Empty
 		 */
 		struct RX_P_NO
 		{
@@ -626,8 +626,8 @@ public:
 		/* Bits TX_FULL: */
 		/*
 		 * TX FIFO full flag.
-		 *           1: TX FIFO full.
-		 *           0: Available locations in TX FIFO. 
+		 * 1: TX FIFO full.
+		 * 0: Available locations in TX FIFO.
 		 */
 		struct TX_FULL
 		{
@@ -659,7 +659,7 @@ public:
 	
 	/*
 	 * REG OBSERVE_TX:
-	 * Transmit observe register 
+	 * Transmit observe register
 	 */
 	struct OBSERVE_TX
 	{
@@ -668,9 +668,9 @@ public:
 		/* Bits PLOS_CNT: */
 		/*
 		 * Count lost packets. The counter is overflow pro-
-		 *           tected to 15, and discontinues at max until reset.
-		 *           The counter is reset by writing to RF_CH. See
-		 *           page 75. 
+		 * tected to 15, and discontinues at max until reset.
+		 * The counter is reset by writing to RF_CH. See
+		 * page 75.
 		 */
 		struct PLOS_CNT
 		{
@@ -680,8 +680,8 @@ public:
 		/* Bits ARC_CNT: */
 		/*
 		 * Count retransmitted packets. The counter is reset
-		 *           when transmission of a new packet starts. See
-		 *           page 75. 
+		 * when transmission of a new packet starts. See
+		 * page 75.
 		 */
 		struct ARC_CNT
 		{
@@ -724,10 +724,10 @@ public:
 		/* Bits RPD: */
 		/*
 		 * Received Power Detector. This register is called
-		 *           CD (Carrier Detect) in the nRF24L01. The name is
-		 *           different in nRF24L01+ due to the different input
-		 *           power level threshold for this bit. See section 6.4
-		 *           on page 25. 
+		 * CD (Carrier Detect) in the nRF24L01. The name is
+		 * different in nRF24L01+ due to the different input
+		 * power level threshold for this bit. See section 6.4
+		 * on page 25.
 		 */
 		struct RPD_
 		{
@@ -758,8 +758,8 @@ public:
 	/*
 	 * REG RX_ADDR_P0:
 	 * Receive address data pipe 0. 5 Bytes maximum
-	 *       length. (LSByte is written first. Write the number of
-	 *       bytes defined by SETUP_AW) 
+	 * length. (LSByte is written first. Write the number of
+	 * bytes defined by SETUP_AW)
 	 */
 	struct RX_ADDR_P0
 	{
@@ -796,8 +796,8 @@ public:
 	/*
 	 * REG RX_ADDR_P1:
 	 * Receive address data pipe 1. 5 Bytes maximum
-	 *       length. (LSByte is written first. Write the number of
-	 *       bytes defined by SETUP_AW) 
+	 * length. (LSByte is written first. Write the number of
+	 * bytes defined by SETUP_AW)
 	 */
 	struct RX_ADDR_P1
 	{
@@ -834,7 +834,7 @@ public:
 	/*
 	 * REG RX_ADDR_P2:
 	 * Receive address data pipe 2. Only LSB. MSBytes
-	 *       are equal to RX_ADDR_P1[39:8] 
+	 * are equal to RX_ADDR_P1[39:8]
 	 */
 	struct RX_ADDR_P2
 	{
@@ -871,7 +871,7 @@ public:
 	/*
 	 * REG RX_ADDR_P3:
 	 * Receive address data pipe 3. Only LSB. MSBytes
-	 *       are equal to RX_ADDR_P1[39:8] 
+	 * are equal to RX_ADDR_P1[39:8]
 	 */
 	struct RX_ADDR_P3
 	{
@@ -908,7 +908,7 @@ public:
 	/*
 	 * REG RX_ADDR_P4:
 	 * Receive address data pipe 4. Only LSB. MSBytes
-	 *       are equal to RX_ADDR_P1[39:8] 
+	 * are equal to RX_ADDR_P1[39:8]
 	 */
 	struct RX_ADDR_P4
 	{
@@ -945,7 +945,7 @@ public:
 	/*
 	 * REG RX_ADDR_P5:
 	 * Receive address data pipe 5. Only LSB. MSBytes
-	 *       are equal to RX_ADDR_P1[39:8] 
+	 * are equal to RX_ADDR_P1[39:8]
 	 */
 	struct RX_ADDR_P5
 	{
@@ -982,10 +982,10 @@ public:
 	/*
 	 * REG TX_ADDR:
 	 * Transmit address. Used for a PTX device only.
-	 *       (LSByte is written first)
-	 *       Set RX_ADDR_P0 equal to this address to handle
-	 *       automatic acknowledge if this is a PTX device with
-	 *       Enhanced ShockBurstTM enabled. See page 75. 
+	 * (LSByte is written first)
+	 * Set RX_ADDR_P0 equal to this address to handle
+	 * automatic acknowledge if this is a PTX device with
+	 * Enhanced ShockBurstTM enabled. See page 75.
 	 */
 	struct TX_ADDR
 	{
@@ -1035,10 +1035,10 @@ public:
 		/* Bits RX_PW_P0: */
 		/*
 		 * Number of bytes in RX payload in data pipe 0 (1 to 32 bytes).
-		 *           0 Pipe not used
-		 *           1 = 1 byte
-		 *           ...
-		 *           32 = 32 bytes 
+		 * 0 Pipe not used
+		 * 1 = 1 byte
+		 * ...
+		 * 32 = 32 bytes
 		 */
 		struct RX_PW_P0_
 		{
@@ -1084,10 +1084,10 @@ public:
 		/* Bits RX_PW_P1: */
 		/*
 		 * Number of bytes in RX payload in data pipe 1 (1 to 32 bytes).
-		 *           0 Pipe not used
-		 *           1 = 1 byte
-		 *           ...
-		 *           32 = 32 bytes 
+		 * 0 Pipe not used
+		 * 1 = 1 byte
+		 * ...
+		 * 32 = 32 bytes
 		 */
 		struct RX_PW_P1_
 		{
@@ -1133,11 +1133,11 @@ public:
 		/* Bits RX_PW_P2: */
 		/*
 		 * Number of bytes in RX payload in data pipe 2 (1 to
-		 *           32 bytes).
-		 *           0 Pipe not used
-		 *           1 = 1 byte
-		 *           ...
-		 *           32 = 32 bytes 
+		 * 32 bytes).
+		 * 0 Pipe not used
+		 * 1 = 1 byte
+		 * ...
+		 * 32 = 32 bytes
 		 */
 		struct RX_PW_P2_
 		{
@@ -1182,11 +1182,11 @@ public:
 		/* Bits RX_PW_P3: */
 		/*
 		 * Number of bytes in RX payload in data pipe 3 (1 to
-		 *           32 bytes).
-		 *           0 Pipe not used
-		 *           1 = 1 byte
-		 *           ...
-		 *           32 = 32 bytes 
+		 * 32 bytes).
+		 * 0 Pipe not used
+		 * 1 = 1 byte
+		 * ...
+		 * 32 = 32 bytes
 		 */
 		struct RX_PW_P3_
 		{
@@ -1231,11 +1231,11 @@ public:
 		/* Bits RX_PW_P4: */
 		/*
 		 * Number of bytes in RX payload in data pipe 4 (1 to
-		 *           32 bytes).
-		 *           0 Pipe not used
-		 *           1 = 1 byte
-		 *           ...
-		 *           32 = 32 bytes 
+		 * 32 bytes).
+		 * 0 Pipe not used
+		 * 1 = 1 byte
+		 * ...
+		 * 32 = 32 bytes
 		 */
 		struct RX_PW_P4_
 		{
@@ -1280,11 +1280,11 @@ public:
 		/* Bits RX_PW_P5: */
 		/*
 		 * Number of bytes in RX payload in data pipe 5 (1 to
-		 *           32 bytes).
-		 *           0 Pipe not used
-		 *           1 = 1 byte
-		 *           ...
-		 *           32 = 32 bytes 
+		 * 32 bytes).
+		 * 0 Pipe not used
+		 * 1 = 1 byte
+		 * ...
+		 * 32 = 32 bytes
 		 */
 		struct RX_PW_P5_
 		{
@@ -1315,7 +1315,7 @@ public:
 	
 	/*
 	 * REG FIFO_STATUS:
-	 * FIFO Status Register 
+	 * FIFO Status Register
 	 */
 	struct FIFO_STATUS
 	{
@@ -1332,12 +1332,12 @@ public:
 		/* Bits TX_REUSE: */
 		/*
 		 * Used for a PTX device
-		 *           Pulse the rfce high for at least 10Î¼s to Reuse last
-		 *           transmitted payload. TX payload reuse is active
-		 *           until W_TX_PAYLOAD or FLUSH TX is executed.
-		 *           TX_REUSE is set by the SPI command
-		 *           REUSE_TX_PL, and is reset by the SPI commands
-		 *           W_TX_PAYLOAD or FLUSH TX 
+		 * Pulse the rfce high for at least 10Î¼s to Reuse last
+		 * transmitted payload. TX payload reuse is active
+		 * until W_TX_PAYLOAD or FLUSH TX is executed.
+		 * TX_REUSE is set by the SPI command
+		 * REUSE_TX_PL, and is reset by the SPI commands
+		 * W_TX_PAYLOAD or FLUSH TX
 		 */
 		struct TX_REUSE
 		{
@@ -1348,7 +1348,7 @@ public:
 		/* Bits TX_FULL: */
 		/*
 		 * TX FIFO full flag. 1: TX FIFO full. 0: Available loca-
-		 *           tions in TX FIFO. 
+		 * tions in TX FIFO.
 		 */
 		struct TX_FULL
 		{
@@ -1359,8 +1359,8 @@ public:
 		/* Bits TX_EMPTY: */
 		/*
 		 * TX FIFO empty flag.
-		 *           1: TX FIFO empty.
-		 *           0: Data in TX FIFO. 
+		 * 1: TX FIFO empty.
+		 * 0: Data in TX FIFO.
 		 */
 		struct TX_EMPTY
 		{
@@ -1380,8 +1380,8 @@ public:
 		/* Bits RX_FULL: */
 		/*
 		 * RX FIFO full flag.
-		 *           1: RX FIFO full.
-		 *           0: Available locations in RX FIFO. 
+		 * 1: RX FIFO full.
+		 * 0: Available locations in RX FIFO.
 		 */
 		struct RX_FULL
 		{
@@ -1392,8 +1392,8 @@ public:
 		/* Bits RX_EMPTY: */
 		/*
 		 * RX FIFO empty flag.
-		 *           1: RX FIFO empty.
-		 *           0: Data in RX FIFO. 
+		 * 1: RX FIFO empty.
+		 * 0: Data in RX FIFO.
 		 */
 		struct RX_EMPTY
 		{
@@ -1425,7 +1425,7 @@ public:
 	
 	/*
 	 * REG DYNPD:
-	 * Enable dynamic payload length 
+	 * Enable dynamic payload length
 	 */
 	struct DYNPD
 	{
@@ -1441,7 +1441,7 @@ public:
 		/* Bits DPL_P5: */
 		/*
 		 * Enable dynamic payload length data pipe 5.
-		 *           (Requires EN_DPL and ENAA_P5) 
+		 * (Requires EN_DPL and ENAA_P5)
 		 */
 		struct DPL_P5
 		{
@@ -1451,7 +1451,7 @@ public:
 		/* Bits DPL_P4: */
 		/*
 		 * Enable dynamic payload length data pipe 4.
-		 *           (Requires EN_DPL and ENAA_P4) 
+		 * (Requires EN_DPL and ENAA_P4)
 		 */
 		struct DPL_P4
 		{
@@ -1461,7 +1461,7 @@ public:
 		/* Bits DPL_P3: */
 		/*
 		 * Enable dynamic payload length data pipe 3.
-		 *           (Requires EN_DPL and ENAA_P3) 
+		 * (Requires EN_DPL and ENAA_P3)
 		 */
 		struct DPL_P3
 		{
@@ -1471,7 +1471,7 @@ public:
 		/* Bits DPL_P2: */
 		/*
 		 * Enable dynamic payload length data pipe 2.
-		 *           (Requires EN_DPL and ENAA_P2) 
+		 * (Requires EN_DPL and ENAA_P2)
 		 */
 		struct DPL_P2
 		{
@@ -1481,7 +1481,7 @@ public:
 		/* Bits DPL_P1: */
 		/*
 		 * Enable dynamic payload length data pipe 1.
-		 *           (Requires EN_DPL and ENAA_P1) 
+		 * (Requires EN_DPL and ENAA_P1)
 		 */
 		struct DPL_P1
 		{
@@ -1491,7 +1491,7 @@ public:
 		/* Bits DPL_P0: */
 		/*
 		 * Enable dynamic payload length data pipe 0.
-		 *           (Requires EN_DPL and ENAA_P0) 
+		 * (Requires EN_DPL and ENAA_P0)
 		 */
 		struct DPL_P0
 		{
@@ -1521,7 +1521,7 @@ public:
 	
 	/*
 	 * REG FEATURE:
-	 * Feature Register 
+	 * Feature Register
 	 */
 	struct FEATURE
 	{
